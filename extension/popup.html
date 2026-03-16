@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #18191B;
+      color: #fff;
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .header .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #12af80;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .info {
+      font-size: 12px;
+      color: #9492b5;
+      line-height: 1.5;
+    }
+    .api-url {
+      margin-top: 12px;
+    }
+    .api-url label {
+      font-size: 11px;
+      color: #9492b5;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .api-url input {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid #2c2e3a;
+      background: #111113;
+      color: #fff;
+      font-size: 12px;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .api-url input:focus {
+      border-color: #818cf8;
+    }
+    .save-btn {
+      margin-top: 8px;
+      width: 100%;
+      padding: 6px;
+      border-radius: 6px;
+      border: none;
+      background: #818cf8;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .save-btn:hover {
+      background: #6366f1;
+    }
+    .status {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #12af80;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="dot"></div>
+    <h1>Slop Screener</h1>
+  </div>
+  <p class="info">
+    Integrates paid/unpaid token status into Axiom.trade.
+    Tokens marked as paid in your system will show the banner image.
+  </p>
+  <div class="api-url">
+    <label>API Base URL</label>
+    <input type="text" id="apiUrl" placeholder="https://your-slop-screener.com" />
+  </div>
+  <button class="save-btn" id="saveBtn">Save</button>
+  <div class="status" id="status">Saved!</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

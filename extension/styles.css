@@ -1,0 +1,137 @@
+/* Slop Screener - Axiom Integration Styles */
+
+.slop-banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid rgb(var(--primary-stroke));
+}
+
+.slop-banner-img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.slop-banner-placeholder {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(var(--primary-stroke), 0.3), rgba(var(--background-secondary), 0.8));
+}
+
+.slop-banner-placeholder span {
+  font-size: 11px;
+  color: rgb(var(--text-tertiary));
+}
+
+/* Dex Paid card - matches Axiom's stat card style */
+.slop-dex-paid-card {
+  display: flex;
+  height: 55px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(var(--primary-stroke), 0.5);
+  padding: 6px 8px 7px;
+}
+
+.slop-dex-paid-value {
+  display: flex;
+  height: 18px;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.slop-dex-paid-value.paid {
+  color: rgb(var(--primary-green));
+}
+
+.slop-dex-paid-value.unpaid {
+  color: rgb(var(--primary-red));
+}
+
+.slop-dex-paid-icon {
+  display: flex;
+  height: 14px;
+  max-height: 14px;
+  min-height: 14px;
+  width: 14px;
+  min-width: 14px;
+  max-width: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slop-dex-paid-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.slop-dex-paid-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.slop-dex-paid-label {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slop-dex-paid-label span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(var(--text-tertiary));
+}
+
+/* Loading shimmer */
+.slop-loading {
+  animation: slop-shimmer 1.5s infinite;
+}
+
+@keyframes slop-shimmer {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Badge shown next to token name */
+.slop-paid-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.slop-paid-badge.paid {
+  background: rgba(var(--primary-green), 0.15);
+  color: rgb(var(--primary-green));
+  border: 1px solid rgba(var(--primary-green), 0.3);
+}
+
+.slop-paid-badge.unpaid {
+  background: rgba(var(--primary-red), 0.15);
+  color: rgb(var(--primary-red));
+  border: 1px solid rgba(var(--primary-red), 0.3);
+}
